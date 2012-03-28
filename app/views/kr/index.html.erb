@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8" />
+		<title>城市快运</title>
+		<style type="text/css">
+			*{ margin:0; padding:0; font:normal; }
+			body{font: 12px/18px "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif; }
+			#kr{ width:960px; margin:0 auto; height:800px; background-color:white; }
+			#header{ position:relative; margin:0; }
+			.nav{ list-style:none; width:100%; margin-top:100px; height:56px; background-color:#D6222E; outline:none;}
+			.nav li{ float:left; margin-top:0px; } 
+			.nav a{ color:white; display:block; text-decoration:none; line-height:56px; padding:0 20px; }
+			.nav li a:hover{ background-color:rgb(158, 7, 40); color:white; }
+			#main_content{ margin-top:100px; }
+			.info{ border-bottom:2px solid rgb(234, 234, 234); margin-bottom:5px;  width:100%; line-height:30px; font-size:18px; }
+			.sender_form label, .arriver_form label{ width:100px; margin-top:10px;  color:rgb(1, 7, 31); }
+			.sender_form input, .arriver_form input{ height:20px; font-size:18px; width:230px; }
+			.address{ width:300px; }
+			.sender_form span, .arriver_form span{ font-size:12px; color:#999; font-size:12px; margin-bottom:10px; }
+			.special_input{ clear:both; width:100%; height:auto; }
+			.special_input textarea{ width:50%; height:50px; }
+			.submit_button{ height:30px; background-color:#D6222E; width:100px; color:white; border:none; cursor:pointer;  margin-top:10px; }
+			.mess{ font-size:14px; color:#999; }
+			.special{ margin-top:10px; }
+			.spe{ margin:10px 0; }
+		</style>
+	</head>
+	<body>
+		<%= flash[:notice] %>
+		<div id="kr">
+			<div id="header">
+				<ul class="nav">
+					<li><a href="index">首页</a></li>
+					<li><a href="kr/about">关于我们</a></li>
+					<li><a href="kr/range">范围</a></li>
+					<li><a href="kr/content">内容</a></li>
+				</ul>
+			</div>
+			<div id="main_content">
+				<%= form_for :sender, :url => { :controller => "kr", :action => "create" }, :name => "kr" do |f| %>
+					<p class="mess">您填写的所有信息我们都不会泄漏出去，请您放心!</p>
+					<h3 class="info">您的个人信息</h3>
+					<div class="sender_form">
+						<p class="spe">
+						<%= f.label "name" %><br />
+						<%= f.text_field :name %>
+						<span>* 您的称呼</span>
+						</p>
+						<p class="spe">
+						<%= f.label "phone" %><br />
+						<%= f.text_field :phone %>
+						<span>* 您的电话,方便联系到您</span>
+						</p>
+						<p class="spe">
+						<%= f.label "address" %><br />
+						广州市<%= f.select(:addr_zone, options_for_select([['天河区', "天河区"], ['白云区', "白云区"], ['海珠区', "海珠区"], ['荔湾区', "荔湾区"]])) %><br /><%= f.text_field :address %>
+						<span>* 您的地址,方便上门取货</span>
+						</p>
+					</div>
+					<h3 class="info">收件人的个人信息</h3>
+					<div class="arriver_form">
+						<p class="spe">
+						<%= f.label "name" %><br />
+						<%= f.text_field :arr_name %>
+						<span>* 收件人如何称呼</span>
+						</p>
+						<p class="spe">
+						<%= f.label "phone" %><br />
+						<%= f.text_field :arr_phone %>
+						<span>* 收件人电话,方便联系到他/她</span>
+						</p>
+						<p class="spe">
+						<%= f.label "address" %><br />
+						广州市<%= f.select(:arr_addr_zone, options_for_select([['天河区', "天河区"], ['白云区', "白云区"], ['海珠区', "海珠区"]])) %><br /><%= f.text_field :arr_address %>
+						<span>* 收件人地址</span>
+						</p>
+						<p class="special_input" >
+						<span class="mess special"> * 如果您有特殊要求，可以点击下面的按键将要求写下来(如规定时间内到达),我们会尽最多努力为您实现.可以不写！</span><br />
+						<input type="button" value="你的特殊要求" onclick="display('special')" /><br />
+						<%= f.text_area :request_sender, :name => "request_sender", :style => "display:none", :id => "special" %>
+						</p>
+					</div>
+					<%= f.submit "提交", :class => "submit_button" %>
+				<% end %>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function display(Div){$(Div).style.display=($(Div).style.display=="none")?"":"none";}
+			function $(toggle){return document.getElementById(toggle);}
+			</script> 
+		</script>
+	</body>
+</html>

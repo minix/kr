@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Success</title>
+		<style type="text/css">
+			*{margin:0; padding:0; }
+			th{ width:150px; text-align:left; padding-left:5px; border-left:1px solid rgb(220, 220, 220);border-bottom:3px solid rgb(220, 220, 220); }
+			.colo{ color:blue; }
+			td { width:50px; border-bottom:1px solid rgb(234, 234, 234); line-height:40px;}
+		</style>
+	</head>
+	<body>
+			<table CellSpacing=0 >
+					<tr CellSpacing=0 class="colo">
+						<th>收件地址</th>
+						<th>收件人</th>
+						<th>传送地址</th>
+						<th>传达客户</th>
+						<th>请求</th>
+						<th>创建时间</th>
+						<th>选项</th>
+					</tr>
+				<% @success_info.each do |success_info| %>
+					<tr class="haha" CellSpacing=0>
+						<td><%= success_info.addr_zone %><%= success_info.arr_name %></td>
+						<td><%= success_info.name %></td>
+						<td><%= success_info.arr_addr_zone %><%= success_info.arr_address %></td>
+						<td><%= success_info.arr_name %></td>
+						<% if success_info.request_sender.blank? %>
+							<td>没要求</td>
+						<% else %>
+							<td><%= success_info.request_sender %></td>
+						<% end %>
+						<td><%= success_info.updated_at.strftime("%F %H:%M") %></td>
+						<td>
+							<%= link_to "Delete", :action => "destroy", :id => success_info, :confirm => "Are you Sure?", :method => :delete %>
+							<%= link_to "Finish", :action => "Finish", :id => success_info %>
+						</td>
+					</tr>
+				<% end %>
+			</table>
+	</body>
+</html>
