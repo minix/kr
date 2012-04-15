@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta lang="utf-8" />
+		<title>Talk</title>
+		<style type="text/css">
+			#talk_1{ }
+			#talk_2{ }
+		</style>
+	</head>
+	<body>
+		<%= form_for :talker, :url => { :controller => "kr", :action => "talk" }, :name => "talk" do |t| %>
+			<%= t.label "name" %><br />
+			<%= t.text_field :name %><br />
+			<%= t.text_area :content %> <br />
+
+			<%= t.label "name" %><br />
+			<%= t.text_field :oname %><br />
+			<%= t.text_area :ocontent %> <br />
+
+			<%= t.submit "Submit" %>
+		<% end %>
+	</body>
+</html>

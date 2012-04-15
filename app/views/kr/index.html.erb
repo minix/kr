@@ -28,6 +28,13 @@
 	</head>
 	<body>
 		<%= flash[:notice] %>
+		<% if @user == nil %>
+			<li class="login"><%= link_to "Login", :controller => "user", :action => "login" %></li>
+			<li class="signup"><%= link_to "Join", :controller => "user", :action => "signup", :class => "signup" %></li>
+		<% else %>
+			<li class="user"><%= @user.name %><br /><span class="logout"><%= link_to 'Logout', :controller => "user", :action => "logout" %></span></li>
+			<li><%= link_to 'Profile', :controller => "kr", :action => "profile" %></li>
+		<% end %>
 		<div id="kr">
 			<div id="header">
 				<ul class="nav">

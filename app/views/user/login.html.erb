@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Login</title>
+		<meta charset="utf-8" />
+		<style>
+		</style>
+	</head>
+	<body>
+		<%= form_for :user, :url => { :controller => "user", :action => "login"} do |f| %>
+			<h3>Login</h3>
+			<label for="user_login">Login:</label><br />
+			<%= f.text_field :name, :size => 20 %>
+			<br />
+			<label for="user_password">Password:</label><br />
+			<%= f.password_field :passwd, :size => 20 %>
+			<%= submit_tag "Submit" %><br />
+			<%= link_to 'Register', :action => 'signup' %>
+			<%= link_to 'Forgot my password', :action => 'forgot_password' %>
+		<% end %>
+	</body>
+</html>
+
+
+

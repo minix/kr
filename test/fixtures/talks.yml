@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  oname: MyString
+  friend: false
+  ofriend: false
+  content: MyText
+  ocontent: MyText
+  test: MyString
+
+two:
+  name: MyString
+  oname: MyString
+  friend: false
+  ofriend: false
+  content: MyText
+  ocontent: MyText
+  test: MyString

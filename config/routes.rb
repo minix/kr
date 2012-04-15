@@ -1,4 +1,12 @@
 Project::Application.routes.draw do
+  get "user/signup"
+
+  get "user/login"
+
+  get "user/logout"
+
+  get "user/forget"
+
   get "kr/index"
 	post "kr/create"
 
