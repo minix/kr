@@ -1,4 +1,6 @@
 Project::Application.routes.draw do
+  get "photo/index"
+
   get "user/signup"
 
   get "user/login"
