@@ -1,4 +1,6 @@
 class Photo < ActiveRecord::Base
+#	require 'mini_magick'
+
 	validates_format_of :content_type, 
 											with: /^image/,
 											message: "--- Must upload photo"
@@ -11,5 +13,10 @@ class Photo < ActiveRecord::Base
 
 	def base_part_of(file_name)
 		File.basename(file_name).gsub(/[^\w._-]/, '')
+	end
+
+	def crop_img
+		img = MiniMagick2::Image.open(self.data)
+		@corp = {:width => img[:width], :height => img[:height]}
 	end
 end
