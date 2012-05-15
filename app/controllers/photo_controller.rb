@@ -1,11 +1,11 @@
 class PhotoController < ApplicationController
-
 	def get
 		@photo = Photo.new
 	end
 
 	def save
 		@photo = Photo.new(params[:photo])
+
 		if @photo.save
 			redirect_to(action: 'show', id: @photo.id)
 		else
@@ -24,5 +24,4 @@ class PhotoController < ApplicationController
 	def show
 		@photo = Photo.find(params[:id])
 	end
-
 end
