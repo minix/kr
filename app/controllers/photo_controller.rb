@@ -5,7 +5,6 @@ class PhotoController < ApplicationController
 
 	def save
 		@photo = Photo.new(params[:photo])
-
 		if @photo.save
 			redirect_to(action: 'show', id: @photo.id)
 		else

@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20120516131558) do
+=======
+ActiveRecord::Schema.define(:version => 20120515095146) do
+>>>>>>> 8c6c111fb7093cc4b9c8e7c472ccaa04b5a8545e
 
   create_table "photos", :force => true do |t|
     t.string   "comment"

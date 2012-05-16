@@ -91,3 +91,4 @@ DEPENDENCIES
   mysql2
   rails (= 3.2.2)
   rmagick
+  subexec (~> 0.2.1)
