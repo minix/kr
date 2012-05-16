@@ -15,7 +15,22 @@ class PhotoController < ApplicationController
 
 	def photo
 		@photo = Photo.find(params[:id])
-		send_data(@photo.data,
+		send_data(@photo.original,
+							filename: @photo.name,
+							type: @photo.content_type,
+							disposition: "inline")
+	end
+
+	def photo_large
+		@photo = Photo.find(params[:id])
+		send_data(@photo.large,
+							filename: @photo.name,
+							type: @photo.content_type,
+							disposition: "inline")
+	end
+	def photo_thumbnail
+		@photo = Photo.find(params[:id])
+		send_data(@photo.thumbnail,
 							filename: @photo.name,
 							type: @photo.content_type,
 							disposition: "inline")

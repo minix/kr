@@ -11,13 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120430041017) do
+ActiveRecord::Schema.define(:version => 20120516131558) do
 
   create_table "photos", :force => true do |t|
     t.string   "comment"
     t.string   "name"
     t.string   "content_type"
-    t.binary   "data",         :limit => 16777215
+    t.binary   "original",     :limit => 16777215
+    t.binary   "large"
+    t.binary   "thumbnail"
     t.datetime "created_at",                       :null => false
     t.datetime "updated_at",                       :null => false
   end

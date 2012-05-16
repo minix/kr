@@ -1,24 +1,23 @@
-#require 'mini_magick'
 require 'base64'
-require 'rmagick'
+require 'mini_magick'
+include MiniMagick
 class Photo < ActiveRecord::Base
-	validates_format_of :content_type, 
-											with: /^image/,
-											message: "--- Must upload photo"
+	validates_format_of :content_type,
+		with: /^image/,
+		message: "--- Must upload photo"
 
 	def uploaded_photo=(photo_field)
-		self.name							= base_part_of(photo_field.original_filename)
-		self.content_type			= photo_field.content_type.chomp
-		img = Magick::Image.read(Base64.encode64(photo_field.read)).first
-		unless img.nil?
-			img.change_geometry!('240x320') do |cols, rows, image|
-				if cols < img.columns or rows < img.rows then
-					image.resize!(cols, rows)
-				end
-			end
-		end
-		self.data							= photo_field
-		#GC.start
+		self.name = base_part_of(photo_field.original_filename)
+		self.content_type = photo_field.content_type.chomp
+		img = MiniMagick::Image.read(photo_field.read)
+		img_original = img
+		self.original = img_original.to_blob
+		img_large = img
+		img_large.resize("240x360")
+		self.large = img_large.to_blob
+		img_thumbnail = img
+		img_thumbnail.resize("120x180")
+		self.thumbnail = img_thumbnail.to_blob
 	end
 
 	def base_part_of(file_name)
