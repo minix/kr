@@ -22,7 +22,7 @@ class Photo < ActiveRecord::Base
 		end
 		GC.start
 		self.data							= img.to_blob
-	end
+eend
 
 	def base_part_of(file_name)
 		File.basename(file_name).gsub(/[^\w._-]/, '')
