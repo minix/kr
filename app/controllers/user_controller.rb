@@ -5,9 +5,9 @@ class UserController < ApplicationController
 			if @user.save
 				session[:user] = User.authenticate(@user.name, @user.password)
 				flash[:message] = "Signup success"
-				redirect_to :controller => "kr", :action => "index"
+				redirect_to :controller => "present", :action => "index"
 			else
-				flash[:warning] = "Signup unsuccessful"
+				flash[:warning] = "Signup Unsuccessful"
 			end
 		end
   end
@@ -17,7 +17,7 @@ class UserController < ApplicationController
 			if session[:user] = User.authenticate(params[:user][:name], params[:user][:passwd])
 				flash[:message] = "login successful"
 				#redirect_to_stored
-				redirect_to :controller => "kr", :action => "index"
+				redirect_to :controller => "present", :action => "index"
 			else
 				flash[:warning] = "login unsuccessful"
 			end
@@ -27,7 +27,7 @@ class UserController < ApplicationController
   def logout
 		session[:user] = nil
 		flash[:message] = 'Loged out'
-		redirect_to :controller => "kr", :action => "index"
+		redirect_to :controller => "present", :action => "index"
   end
 
   def forget
