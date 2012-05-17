@@ -7,9 +7,9 @@ class Photo < ActiveRecord::Base
 		message: "--- Must upload photo"
 
 	def uploaded_photo=(photo_field)
-		self.name = base_part_of(photo_field.original_filename)
-		self.content_type = photo_field.content_type.chomp
-		img = MiniMagick::Image.read(photo_field.read)
+		self.name							= base_part_of(photo_field.original_filename)
+		self.content_type			= photo_field.content_type.chomp
+		img = MiniMagick::Image.read(photo_field.read) 
 		unless img.nil?
 			img_original = img
 			self.original = img_original.to_blob
