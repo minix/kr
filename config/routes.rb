@@ -65,7 +65,12 @@ Project::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+<<<<<<< HEAD
   root :to => 'present#index'
+=======
+  #root :to => 'kr#index'
+	root :to => 'present#index'
+>>>>>>> 1a60e95af2521db043be97f4e4abdebe99a612a6
 
   # See how all your routes lay out with "rake routes"
 

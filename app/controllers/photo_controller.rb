@@ -19,7 +19,6 @@ class PhotoController < ApplicationController
 							type: @photo.content_type,
 							disposition: "inline")
 	end
-
 	def photo_large
 		@photo = Photo.find(params[:id])
 		send_data(@photo.large,

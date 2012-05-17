@@ -12,16 +12,24 @@
 # It's strongly recommended to check this file into your version control system.
 
 <<<<<<< HEAD
+ActiveRecord::Schema.define(:version => 20120517060631) do
+=======
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20120516131558) do
 =======
 ActiveRecord::Schema.define(:version => 20120515095146) do
 >>>>>>> 8c6c111fb7093cc4b9c8e7c472ccaa04b5a8545e
+>>>>>>> 390af6df51e81207d4135946818a9cdd7399bf10
 
   create_table "photos", :force => true do |t|
     t.string   "comment"
     t.string   "name"
     t.string   "content_type"
+<<<<<<< HEAD
+    t.binary   "original",     :limit => 16777215, :null => false
+=======
     t.binary   "original",     :limit => 16777215
+>>>>>>> 390af6df51e81207d4135946818a9cdd7399bf10
     t.binary   "large"
     t.binary   "thumbnail"
     t.datetime "created_at",                       :null => false
