@@ -1,0 +1,2 @@
+class PresentController < ApplicationController
+end
