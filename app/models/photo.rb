@@ -2,6 +2,8 @@ require 'mini_magick'
 #include Magick
 include MiniMagick
 class Photo < ActiveRecord::Base
+	belongs_to :presents
+
 	validates_format_of :content_type,
 		with: /^image/,
 		message: "--- Must upload photo"
@@ -25,4 +27,10 @@ class Photo < ActiveRecord::Base
 	def base_part_of(file_name)
 		File.basename(file_name).gsub(/[^\w._-]/, '')
 	end
+	 def string_to_binary(value)
+		 return "data:#{file_type(value)};base64," + Base64.encode64(value)
+	 end
+	 #def file_type(file)
+	 #  return file.content_type.chomp
+	 #end
 end

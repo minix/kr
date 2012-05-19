@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,13 +21,12 @@
 						<li><%= link_to @user.name, :controller => "kr", :action => "profile" %></li>
 						<li><%= link_to '注销', :controller => "user", :action => "logout" %></li>
 					<% end %>
-					<img src="<%= url_for(:controller => 'photo', :action => 'photo', :id => @photo.id ) %>" />
 				</ul>
 			</nav>
 		</header>
 		<h1>My Project Presend </h1>
+		<% @photo.each do |img| %>
+		<img src="<%= url_for(controller: 'photo', action: 'photo_large', id: img.id) %>" />
+		<% end %>
 	</body>
 </html>
-=======
-<h1>Hello, My Project -- Present </h1>
->>>>>>> 1a60e95af2521db043be97f4e4abdebe99a612a6
