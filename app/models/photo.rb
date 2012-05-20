@@ -12,6 +12,7 @@ class Photo < ActiveRecord::Base
 		self.name							= base_part_of(photo_field.original_filename)
 		self.content_type			= photo_field.content_type.chomp
 		img = MiniMagick::Image.read(photo_field.read) 
+		begin
 		unless img.nil?
 			img_original = img
 			self.original = img_original.to_blob
@@ -21,6 +22,9 @@ class Photo < ActiveRecord::Base
 			img_thumbnail = img
 			img_thumbnail.resize("120x180")
 			self.thumbnail = img_thumbnail.to_blob
+		end
+		rescue
+			print "Upload $!, please check Image !"
 		end
 	end
 

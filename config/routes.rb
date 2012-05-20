@@ -1,19 +1,12 @@
 Project::Application.routes.draw do
   get "photo/index"
-
   get "user/signup"
-
   get "user/login"
-
   get "user/logout"
-
   get "user/forget"
-
   get "kr/index"
 	post "kr/create"
-
   get "kr/about"
-
   get "kr/success"
 
   # The priority is based upon order of creation:
@@ -73,4 +66,5 @@ Project::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   match ':controller(/:action(/:id))(.:format)'
+	match '/photo/:id' => "photo#present"
 end

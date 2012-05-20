@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Base Present to Her/His</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+		<header>
+			<nav>
+				<ul id="nav">
+					<% if @user == nil %>
+						<li><%= link_to "创建新用户", :controller => "user", :action => "signup", :class => "signup" %></li>
+						<li><%= link_to "登录", :controller => "user", :action => "login" %></li>
+					<% else %>
+						<li><%= link_to @user.name, :controller => "kr", :action => "profile" %></li>
+						<li><%= link_to '注销', :controller => "user", :action => "logout" %></li>
+					<% end %>
+				</ul>
+			</nav>
+		</header>
+<%= yield %>
+
+</body>
+</html>

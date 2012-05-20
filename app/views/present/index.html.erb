@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta lang="en" />
-		<title>Find it Best like Presend</title>
-		<style type="text/css">
-			#nav{ height:40px; margin-left:300px; float:left; margin-top:20px; }
-			#nav li{ display:inline-block; padding:15px 5px; margin:1px; }
-			#nav li a{ text-decoration:none; padding:15px 5px; font-size:.8em; }
-			#nav li a:hover{ text-decoration:underline;}
-		</style>
-	</head>
-	<body>
-		<header>
-			<nav>
-				<ul id="nav">
-					<% if @user == nil %>
-						<li><%= link_to "创建新用户", :controller => "user", :action => "signup", :class => "signup" %></li>
-						<li><%= link_to "登录", :controller => "user", :action => "login" %></li>
-					<% else %>
-						<li><%= link_to @user.name, :controller => "kr", :action => "profile" %></li>
-						<li><%= link_to '注销', :controller => "user", :action => "logout" %></li>
-					<% end %>
-				</ul>
-			</nav>
-		</header>
-		<h1>My Project Presend </h1>
-		<% @photo.each do |img| %>
-		<img src="<%= url_for(controller: 'photo', action: 'photo_large', id: img.id) %>" />
-		<% end %>
-	</body>
-</html>
+<h1>My Project Presend </h1>
+<% @photo.each do |img| %>
+	<a href="/photo/<%= img.id %>"><img src="<%= url_for(controller: 'photo', action: 'photo_thumbnail', id: img.id) %>" /></a>
+<% end %>
