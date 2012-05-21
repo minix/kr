@@ -1,7 +1,15 @@
 worker_processes 2
 
+file_name = "/tmp/unicorn.sock"
+new_file = "/tmp/unicorn1.sock"
+
 #listen '127.0.0.1:5555'
-listen "/tmp/unicorn.sock"
+#if File.exist? file_name
+#	listen "#{new_file}"
+#else
+	listen "#{file_name}"
+#end
+
 
 stderr_path File.expand_path('/tmp/unicorn.log', ENV['RAILS_ROOT'])
 stdout_path File.expand_path('/tmp/unicorn.log', ENV['RAILS_ROOT'])
