@@ -1,55 +1,15 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>SignUp</title>
-		<meta charset="utf-8" />
-		<style>
-			h1, form, label, a, br, p, body, input{ margin:0px; padding:0px; }
-			body{ font-size:normal; width:100%; font: 13px/1.22 arial,helvetica,clean,sans-serif; }
-			.gl{ border:none; color:#505050; }
-			a{ text-decoration:none; font-size:.8em; }
-			input{ width:21em; padding:1px 4px; }
-			div#main{ position:relative; margin:0 auto; width:800px; }
-			.sigup_info{ padding: 20px 50px 10px 5px; font-size:1.5em; width:500px; border-bottom:2px solid #E0E0E0; color:#800; }
-			div.main_signup{ }
-			.login_field, .passwd, .confirmation, .email{ margin:2px 0; padding:3px 0; }
-			.label{ display:inline-block; text-align:right; width:15em; color:#505050; font-size:100%; padding-right:4px; }
-			.submit{ width:20em; text-align:right; margin-top:10px; }
-			.buttom{ padding:5px 6px; border:1px solid #505050; width:100px; color:#fff; text-shadow:-1px -1px 0 rgba(0,0,0,0.3); background:-webkit-gradient(linear,left top, left bottom, from(#8ADD6D),to(#60B044)); -moz-linear-gradient(top, #8ADD6D, #60B044); border-color:#74BB5A; border-bottom-color:#509338; }
-		</style>
-	</head>
-	<body>
-		<div id="main">
-			<%= link_to "Logo", :controller => "kr", :action => "index" %>
-			<p class="sigup_info">Now,You can Setup My Presion infomation to Share You Like Bookmark</p>
-			<div class="main_signup">
-				<%= form_for :user, :url => { :controller => "user", :action => "signup" } do |f| %>
-					<fieldset class="gl">
-						<div class="email">
-							<label for="user mail", class="label">Email</label>
-							<%= f.text_field :email, :size => 20 %><br />
-						</div>
-						<div class="login_field">
-							<label for="user_login", class="label">Username</label>
-							<%= f.text_field :name, :size => 20 %>
-						</div>
-						<div class="passwd">
-							<label for="user_password", class="label">Password</label>
-							<%= f.password_field :password, :size => 20 %>
-						</div>
-						<div class="confirmation">
-							<label for="user_password_confirmation", class="label">Confirmation</label>
-							<%= f.password_field :password_confirmation, :size => 20 %>
-						</div>
-						<div class="submit">
-							<%= submit_tag "signup", :class => "buttom" %>
-							<%= link_to "Login", :controller => :user, :action => "login" %>
-						</div>
-						<div id="login">
-						</div>
-					</fieldset>
-				<% end %>
-			</div>
-		</div>
-	</body>
-</html>
+<%= link_to "Logo", controller: "present", action: "index" %>
+<%= form_for :user, url: { controller: "user", action: "signup" } do |f| %>
+	<fieldset>
+			<label for="user mail">Email</label>
+			<%= f.text_field :email, :size => 20 %><br />
+			<label for="user_login">Username</label>
+			<%= f.text_field :name, :size => 20 %>
+			<label for="user_password">Password</label><br />
+			<%= f.password_field :password, :size => 20 %>
+			<label for="user_password_confirmation">Confirmation</label><br />
+			<%= f.password_field :password_confirmation, :size => 20 %><br />
+			<%= submit_tag "signup"%>
+			<%= link_to "Login", :controller => :user, :action => "login" %>
+	</fieldset>
+<% end %>

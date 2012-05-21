@@ -1,0 +1,13 @@
+<header>
+	<nav>
+		<ul id="nav">
+			<% if @user == nil %>
+				<li><%= link_to "创建新用户", controller: "user", action: "signup", class: "signup" %></li>
+				<li><%= link_to "登录", controller: "user", action: "login" %></li>
+			<% else %>
+				<li><%= link_to @user.name, controller: "user", action: "profile" %></li>
+				<li><%= link_to '注销', controller: "user", action: "logout" %></li>
+			<% end %>
+		</ul>
+	</nav>
+</header>

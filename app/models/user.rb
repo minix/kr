@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
 
 
 		def self.authenticate(name, password)
-			u = find(:first, :conditions => ["name = ?", name])
+			u = find(:first, conditions: ["name = ?", name])
 			#u = find(:first, :conditions => { :email => "#{email}" })
 			return nil if u.nil?
 			return u if User.encrypt(password, u.salt) == u.hash_passwd
