@@ -9,8 +9,8 @@ class PresentController < ApplicationController
 	def show
 		@photo = Photo.find(params[:id])
 		respond_to do |format|
-			format.html
-			format.xml { render xml:@photo }
+			format.html 
+			format.json { render json: @photo }
 		end
 	end
 	

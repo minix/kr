@@ -3,7 +3,6 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 #require "action_controller/railtie"
-#require "active_record"
 #require "action_mailer/railtie"
 #require "active_resource/railtie"
 #require "rails/test_unit/railtie"
@@ -60,10 +59,10 @@ module Project
     # config.active_record.whitelist_attributes = true
 
     # Enable the asset pipeline
-    config.assets.enabled = true
-		config.assets.compile = true
-		config.serve_static_assets = true
+    #config.assets.enabled = true
+		#config.assets.compile = true
+		#config.serve_static_assets = true
+    #config.assets.version = '1.0'
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
   end
 end
