@@ -12,19 +12,31 @@ class Photo < ActiveRecord::Base
 		self.name							= base_part_of(photo_field.original_filename)
 		self.content_type			= photo_field.content_type.chomp
 		img = MiniMagick::Image.read(photo_field.read) 
-		begin
 		unless img.nil?
+			# add in 20120523 , crop scale 
+			#if img[:width] < img[:height]
+			#	shave_off = ((img[:height] - img[:width])/2).round
+			#	img.shave("0x#{shave_off}")
+			#elsif
+			#	img[:width] > img[:height]
+			#	shave_off = ((img[:width] - img[:height])/2).round
+			#	img.shave("#{shave_off}x0")
+			#end
+			#################################
 			img_original = img
 			self.original = img_original.to_blob
 			img_large = img
-			img_large.resize("240x360")
+			img_large_w = (img_large[:width] * 0.6).to_i
+			img_large_h = (img_large[:height] * 0.6).to_i
+			#img_large.resize("240x360")
+			img_large.resize("#{img_large_w}x#{img_large_h}")
 			self.large = img_large.to_blob
 			img_thumbnail = img
-			img_thumbnail.resize("120x180")
+			img_thumbnail_w = (img[:width] * 0.4).to_i
+			img_thumbnail_h = (img[:height] * 0.4).to_i
+			#img_thumbnail.resize("120x180")
+			img_thumbnail.resize("#{img_thumbnail_w}x#{img_thumbnail_h}")
 			self.thumbnail = img_thumbnail.to_blob
-		end
-		rescue
-			print "Upload $!, please check Image !"
 		end
 	end
 
