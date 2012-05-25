@@ -63,7 +63,8 @@ table {
 	border-spacing: 0;
 }
 html{ background:url("images/bg.jpg") repeat scroll 0% 0% rgb(247, 245, 245); }
-body{ max-width:2147px; }
+body{ }
+#all_content{ max-width:1500px; margin:0 auto; position:relative; }
 #header{ width:100%; height:44px; background-color:rgb(250, 247, 247);}
 #header-content{ top:41px; left:0; right:0; border-top:1px solid #CFCACA; box-shadow:inset 0 1px white, 0 1px 3px rgba(34, 25, 25, 0.4); position:absolute; background-color:#FAF7F7; }
 .header-contenter{ margin:0 auto;line-height:35px; text-align:center; display:block; }
