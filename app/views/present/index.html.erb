@@ -1,12 +1,11 @@
 <div id="all_content">
-<h1>My Project Presend </h1>
-
-<ul>
-	<% @photo.each do |img| %>
-			<li class="item">
-				<%= link_to image_tag(url_for(controller: 'photo', action: 'photo_large', id: img.id)), controller: "present", action: "show", id: img.id %>
-				<div class="caption"><a href="haha">hahahahahhha</a></div>
-			</li>
-	<% end %>
-</ul>
+	<h1>My Project Presend </h1>
+	<ul>
+		<% @photo.each do |img| %>
+		<li class="item">
+			<%= link_to image_tag(url_for(controller: 'photo', action: 'photo_large', id: img.id)), controller: "present", action: "show", id: img.id %>
+			<div class="caption"><a href="haha">hahahahahhha</a></div>
+		</li>
+		<% end %>
+	</ul>
 </div>
