@@ -1,23 +1,15 @@
-<header id="header">
-	<div id="search_input">
-		<form>
+<div id="header">
+	<form id="search_input">
 			<input type="text" name="search" class="sea" /> 
 			<a class="searchbox_submit" href="#"><img src="project/public/images/s.gif" alt="" /></a>
-		</form>
-	</div>
-	<nav>
-		<ul id="nav">
-			<% if @user == nil %>
-				<li><%= link_to "创建新用户", controller: "user", action: "signup", class: "signup" %></li>
-				<li><%= link_to "登录", controller: "user", action: "login" %></li>
-			<% else %>	
-				<li><%= link_to @user.name, controller: "user", action: "profile" %></li>
-				<li><%= link_to '注销', controller: "user", action: "logout" %></li>
-			<% end %>
-		</ul>
-	</nav>
-	<div id="header-content">
-		<ul class="header-contenter">
-			<li>haha</li>
-	</div>
-</header>
+	</form>
+	<ul class="nav">
+		<% if @user == nil %>
+			<li><%= link_to "创建新用户", controller: "user", action: "signup", class: "signup" %></li>
+			<li><%= link_to "登录", controller: "user", action: "login" %></li>
+		<% else %>	
+			<li><%= link_to @user.name, controller: "user", action: "profile" %></li>
+			<li><%= link_to '注销', controller: "user", action: "logout" %></li>
+		<% end %>
+	</ul>
+</div>
