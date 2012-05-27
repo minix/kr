@@ -1,5 +1,4 @@
 require 'mini_magick'
-require 'imlib2'
 #include Magick
 include MiniMagick
 class Photo < ActiveRecord::Base
