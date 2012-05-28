@@ -1,0 +1,5 @@
+<h1>Talk</h1>
+<%= form_for :talk, url: { controller: "talk", action: "talk" }, method: "get" do |t| %>
+	<%= t.text_area :talk_content %>
+	<%= t.submit "Submit" %>
+<% end %>

@@ -1,0 +1,7 @@
+<%= form_for @talk, :url => { controller: "bookmark", action: "modify", :id => @talk } do |t| %>
+	<p>
+	<%= f.label "Talk" %>
+	<%= f.text_field :talk_content %>
+	</p>
+	<%= f.submit "Update" %>
+<% end %>
