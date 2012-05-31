@@ -1,12 +1,7 @@
-/*feature*/
-.feature { position:relative; width:1000px; height:276px; background:#fff; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .15); -moz-box-shadow: 	0 0 4px rgba(0, 0, 0, .15); box-shadow: 		0 0 4px rgba(0, 0, 0, .15); }
-.featureWrapper { position:relative; top:3px; left:45px; margin-left:45px; width:150px; height:270px; z-index:1; }
-/*.featureWrapper img{
-	width:650px; height:270px;
-}*/
-.feature .caption { position:absolute; bottom:0; left:0; width:630px; height:30px; padding:10px; background:#000; opacity:0.8; filter:alpha(opacity=80); color:#fff; }
-.feature ul { position:absolute; top:0px; left:0px; margin:0; padding:0; width:44px; z-index:2; list-style:none; }
-.feature li a { display:block; width:44px; height:37px; padding:10px; background:#600; border-top:1px solid #933; border-bottom:1px solid #300; color:#fff; -webkit-box-shadow: -2px 0 2px rgba(0, 0, 0, .2); -moz-box-shadow:-2px 0 2px rgba(0, 0, 0, .2); box-shadow:-2px 0 2px rgba(0, 0, 0, .2); }
+.feature { position:relative; width:1000px; top:20px; height:676px; background:#fff; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .15); -moz-box-shadow: 	0 0 4px rgba(0, 0, 0, .15); box-shadow: 		0 0 4px rgba(0, 0, 0, .15); }
+.featureWrapper { position:relative; top:-50px; left:151px; margin-left:25px; width:100%; z-index:1; margin-top:5px; }
+.feature ul { position:absolute; top:0px; left:0px; margin:0; padding:0; width:84px; z-index:2; list-style:none; }
+.feature li a { display:block; width:150px; height:22px; padding:11px; background-color:rgb(51, 57, 61); color:#fff; -webkit-box-shadow: -2px 0 2px rgba(0, 0, 0, .2); -moz-box-shadow:-2px 0 2px rgba(0, 0, 0, .2); box-shadow:-2px 0 2px rgba(0, 0, 0, .2); font-size:1em; }
 .feature li a:hover { background:#800; }
-.feature li a.selected { position:relative;  width:44px; height:30px; border:0; background-color:red; -webkit-box-shadow: none; -moz-box-shadow: 	none; box-shadow: 		none; }
-.feature li a strong { line-height:30px; }
+.feature li a.selected { position:relative;  width:150px; height:22px; border:0; background-color:rgb(27, 144, 228); -webkit-box-shadow: none; -moz-box-shadow: 	none; box-shadow: 		none; }
+.feature li a strong { line-height:10px; }
