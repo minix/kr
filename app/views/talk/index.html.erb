@@ -1,2 +1,6 @@
-<h1>Talk#index</h1>
-<p>Find me in app/views/talk/index.html.erb</p>
+<%= notice %>
+
+<% @t.each do |talk| %>
+	<h2><%= talk.user_name %>: <%= talk.talk_content %><%= link_to "Delete", :action => "destroy", :id => talk, :confirm => "Are you Sure", :method => :delete %><%= link_to "Edit", :action => "modify", :id => talk %> </h2>
+<% end %>
+
