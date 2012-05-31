@@ -8,3 +8,4 @@ $(document).ready(function() {
 		$(this).find('div.caption').stop(false,true).fadeOut(400);
 	});
 });
+

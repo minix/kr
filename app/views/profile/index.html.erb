@@ -1,0 +1,26 @@
+<div class="feature"> 
+	<ul> 
+		<li> <a href="#feature1" class="selected"><strong>Item 1</strong></a> </li> 
+		<li> <a href="#feature2"><strong>Item 2</strong></a></li>
+		<li> <a href="#feature3"><strong>Item 3</strong></a></li> 
+	</ul> 
+	<div id="feature1" style="display: block;" class="featureWrapper">
+		<a href="#" target="_blank"><h1>haha</h1></a>
+	</div> 
+	<div id="feature2" style="display:none;" class="featureWrapper">
+		<a href="#" target="_blank"><h1>hihi</h1></a>
+	</div> 
+	<div id="feature3" style="display:none;" class="featureWrapper">
+		<a href="#" target="_blank"><h1>hoho</h1></a>
+	</div> 
+</div> 
+<script type="text/javascript"> 
+	$(".feature").idTabs(function(id,list,set){ 
+			$("a",set).removeClass("selected") 
+			.filter("[href='"+id+"']",set).addClass("selected"); 
+			for(i in list) 
+			$(list[i]).hide(); 
+			$(id).fadeIn(); 
+			return false; 
+			}); 
+</script>
