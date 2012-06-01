@@ -7,6 +7,7 @@
 		<li> <a href="#feature5"><strong>好友推荐的礼物</strong></a></li> 
 		<li> <a href="#feature6"><strong>私隐</strong></a></li> 
 		<li> <a href="#feature7"><strong>邀请好友</strong></a></li> 
+		<li> <a href="#feature8"><strong>搜索好友</strong></a></li> 
 	</ul> 
 	<div id="feature1" style="display:block;" class="featureWrapper">
 		<h1>个人爱好</h1>
@@ -28,6 +29,12 @@
 	</div> 
 	<div id="feature7" style="display:none;" class="featureWrapper">
 		<h1>邀请好友</h1>
+	</div> 
+	<div id="feature8" style="display:none;" class="featureWrapper">
+		<h1>搜索好友</h1>
+		<% @username.each do |username| %>
+			<%= username.name %>
+		<% end %>
 	</div> 
 </div> 
 <script type="text/javascript"> 
