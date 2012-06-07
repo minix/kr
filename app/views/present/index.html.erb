@@ -3,7 +3,8 @@
 		<% @photo.each do |img| %>
 		<li class="item">
 			<%= link_to image_tag(url_for(controller: 'photo', action: 'photo_large', id: img.id)), controller: "present", action: "show", id: img.id %>
-			<div class="caption"><a href="haha">hahahahahhha</a></div>
+			<div class="caption"><%= button_to "Like", :controller => "profile", :action => "create", :remote => true, :form => { "data-type" => "json" } %>
+				<a href="haha">hahahahahhha</a></div>
 			
 		</li>
 		<% end %>
