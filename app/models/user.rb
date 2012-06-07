@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 		require 'digest/sha1'
 
+		has_many :likes
 		belongs_to :kr
 
 		validates_presence_of :email, :password, :password_confirmation, :salt
