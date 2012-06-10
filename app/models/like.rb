@@ -1,4 +1,3 @@
 class Like < ActiveRecord::Base
-  attr_accessible :likeable_id, :likeable_type, :user_id
-
+  attr_accessible :like_present_name, :like_user
 end

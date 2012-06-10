@@ -11,14 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120602024104) do
+ActiveRecord::Schema.define(:version => 20120610093647) do
 
   create_table "likes", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "likeable_type"
-    t.string   "likeable_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.string   "like_user"
+    t.string   "like_present_name"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "photos", :force => true do |t|
