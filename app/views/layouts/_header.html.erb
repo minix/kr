@@ -3,6 +3,9 @@
 			<input type="text" name="search" class="sea" /> 
 			<a class="searchbox_submit" href="#"><img src="project/public/images/s.gif" alt="" /></a>
 	</form>
+	<div id="logo">
+		<%= link_to "Home", controller: "present", action: "index" %>
+	</div>
 	<ul class="nav">
 		<% if @user == nil %>
 			<li><%= link_to "创建新用户", controller: "user", action: "signup", class: "signup" %></li>
