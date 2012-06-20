@@ -62,7 +62,7 @@ table {
 	border-spacing: 0;
 } */
 html{ background:url("public/images/bg.jpg") repeat scroll 0% 0% rgb(247, 245, 245); }
-body{ min-width:1000px; }
+body{ min-width:1000px; height:100%; }
 #logo{ position:relative; margin-left:50%; margin-bottom:-25px; padding-top:10px;}
 #header{ width:100%; background-color:rgb(250, 247, 247); position:relative; height:42px; margin-bottom:45px;}
 .nav{ position:relative; margin-left:85%; margin-top:10px; }
