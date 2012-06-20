@@ -62,19 +62,19 @@ table {
 	border-spacing: 0;
 } */
 html{ background:url("public/images/bg.jpg") repeat scroll 0% 0% rgb(247, 245, 245); }
-body{ min-width:1200px; }
+body{ min-width:1000px; }
 #logo{ position:relative; margin-left:50%; margin-bottom:-25px; padding-top:10px;}
-#header{ width:100%; background-color:rgb(250, 247, 247); position:relative; height:43px;}
+#header{ width:100%; background-color:rgb(250, 247, 247); position:relative; height:42px; margin-bottom:45px;}
 .nav{ position:relative; margin-left:85%; margin-top:10px; }
 .nav li{ display:inline-block; float:left;  }
 .nav li a{ text-decoration:none; padding:15px 12px; font-size:.8em; color:#333; }
 .nav li a:hover{ text-decoration:underline; background-color:#EBEBEB; }
 
-#search_input { float:left; }
+#search_input { float:left; width:270px; height:44px;}
 #search_input .sea{ width:200px; height:25px; margin-left:30px; margin-top:7px; font-size:1em; border:1px solid; border-color:#C2C0C0 #CCCACA #D1CFCF; box-shadow:0 1px white, inset 0 1px rgba(34, 25, 25, 0.05); -moz-box-shadow: 0 1px #fff, inset 0 1px rgba(34,25,25,0.05); -webkit-box-shadow:0 1px white, inset 0 1px rgba(34, 25, 25, 0.05);}
-.searchbox_submit{ border-top:1px solid #C2C0C0;border-right:1px solid #C2C0C0; border-bottom:1px solid #C2C0C0;background-color:transparent;float:left; position:absolute; top:7px; left:230px; width:30px; height:27px; cursor:pointer; line-height:20px; }
-.searchbox_submit img{ position:absolute; left:10px; top:7px; }
-#search_present{ border-top:1px solid #CFCACA; border-bottom:1px solid #CFCACA; box-shadow:inset 0 1px white, 0 1px 3px rgba(34, 25, 25, 0.4); position:absolute; background-color:#FAF7F7; top:44px; width:100%; min-width:1200px; text-align:center;}
+.searchbox_submit{ border:1px solid #C2C0C0; background-color:transparent; float:left; position:absolute; margin-top:7px; margin-left:-5px; width:29px; height:29px; }
+.searchbox_submit img{ position:absolute; left:18px; }
+#search_present{ border-top:1px solid #CFCACA; border-bottom:1px solid #CFCACA; box-shadow:inset 0 1px white, 0 1px 3px rgba(34, 25, 25, 0.4); position:absolute; background-color:#FAF7F7; top:44px; width:100%; min-width:1000px; text-align:center;}
 .search_content{ margin:0 auto; position:relative; line-height:30px; left:42%; }
 .search_content li{ float:left; display:block; }
 .search_content li a{ color:#8C7E7E; margin-right:20px; font-size:13px; }
