@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120610093647) do
+ActiveRecord::Schema.define(:version => 20120621183240) do
+
+  create_table "comments", :force => true do |t|
+    t.string   "username"
+    t.integer  "present_id"
+    t.string   "comment_content"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "likes", :force => true do |t|
     t.string   "like_user"
@@ -40,6 +48,22 @@ ActiveRecord::Schema.define(:version => 20120610093647) do
   create_table "profiles", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "pros", :force => true do |t|
+    t.string   "name",           :null => false
+    t.string   "addr_zone",      :null => false
+    t.string   "address",        :null => false
+    t.integer  "phone",          :null => false
+    t.string   "arr_name",       :null => false
+    t.string   "arr_addr_zone",  :null => false
+    t.string   "arr_address",    :null => false
+    t.integer  "arr_phone",      :null => false
+    t.text     "request_sender"
+    t.string   "select"
+    t.text     "test"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "talks", :force => true do |t|

@@ -1,3 +1,12 @@
 <div id="persion_pre">
 <%= image_tag(url_for(controller: 'photo', action: 'photo', id: @photo.id)) %>
 </div>
+<p>You are <%= @username.name %></p>
+<%= form_for :comment do |comment| %>
+	<%= comment.text_area :comment_content %><br />
+	<%= comment.submit "Comment" %>
+<% end %>
+
+<% @all_comment.each do |all_comment| %>
+	<%= all_comment.username %> Say: <%= all_comment.comment_content %>
+<% end %>

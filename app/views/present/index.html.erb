@@ -2,12 +2,13 @@
 	<ul>
 		<% @photo.each do |img| %>
 		<li class="item">
-			<%= link_to image_tag(url_for(controller: 'photo', action: 'photo', id: img.id)), controller: "present", action: "show", id: img.id %>
-			<div class="caption">
-				<%= form_for :like, remote: true, url: { controller: "like", action: "create" } do |like| %>
-					<%= like.button "Like" %>
-				<% end %>
-				<a href="haha">hahaha</a></div>
+		<%= link_to image_tag(url_for(controller: 'photo', action: 'photo_large', id: img.id)), controller: "present", action: "show", id: img.id %><br />
+			<!--<div class="caption"> -->
+				<div class="change">
+					<span><%= link_to "hahaha" %></span>
+					<span><%= link_to "Delete", controller: "present", action: "destroy", method: "delete", id: img.id %></span>
+				</div>
+				<!--</div> -->
 		</li>
 		<% end %>
 	</ul>

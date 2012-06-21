@@ -16,14 +16,16 @@ class Photo < ActiveRecord::Base
 			img_original = img
 			self.original = img_original.to_blob
 			img_large = img
-			img_large_w = (img_large[:width] * 0.5).to_i
-			img_large_h = (img_large[:height] * 0.5).to_i
-			img_large.resize("#{img_large_w}x#{img_large_h}")
+			#img_large_w = (img_large[:width] * 0.5).to_i
+			#img_large_h = (img_large[:height] * 0.5).to_i
+			#img_large.resize("#{img_large_w}x#{img_large_h}")
+			img_large.resize("200x200")
 			self.large = img_large.to_blob
 			img_thumbnail = img
-			img_thumbnail_w = (img[:width] * 0.2).to_i
-			img_thumbnail_h = (img[:height] * 0.2).to_i
-			img_thumbnail.resize("#{img_thumbnail_w}x#{img_thumbnail_h}")
+			#img_thumbnail_w = (img[:width] * 0.2).to_i
+			#img_thumbnail_h = (img[:height] * 0.2).to_i
+			#img_thumbnail.resize("#{img_thumbnail_w}x#{img_thumbnail_h}")
+			img_thumbnail.resize("80x80")
 			self.thumbnail = img_thumbnail.to_blob
 		end
 	end

@@ -1,5 +1,6 @@
 class PhotoController < ApplicationController
 	def get
+		current_user
 		@photo = Photo.new
 	end
 
