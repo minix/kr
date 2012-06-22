@@ -8,6 +8,7 @@ class PresentController < ApplicationController
 	end
 
 	def show
+		@user = session[:user]
 		@photo = Photo.find(params[:id])
 		if current_user
 			@username = current_user
@@ -17,8 +18,10 @@ class PresentController < ApplicationController
 			if @comment.save
 				@comment.comment_content = nil
 			end
+		else
+			flash[:notice] = "must login to comment"
 		end
-		@all_comment = Comment.where(:present_id => @photo)
+			@all_comment = Comment.where(:present_id => @photo)
 	end
 
 	def destroy
