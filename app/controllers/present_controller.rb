@@ -8,16 +8,17 @@ class PresentController < ApplicationController
 	end
 
 	def show
-		current_user
 		@photo = Photo.find(params[:id])
-		@username = current_user
-		@comment = Comment.new(params[:comment])
-		@comment.present_id = @photo.id
-		@comment.username = User.find(current_user).name
-		if @comment.save
-			@comment.comment_content = nil
+		if current_user
+			@username = current_user
+			@comment = Comment.new(params[:comment])
+			@comment.present_id = @photo.id
+			@comment.username = User.find_by_id(current_user).name
+			if @comment.save
+				@comment.comment_content = nil
+			end
 		end
-		@all_comment = Comment.find(:all)
+		@all_comment = Comment.where(:present_id => @photo)
 	end
 
 	def destroy
