@@ -3,12 +3,12 @@
 		<% @photo.each do |img| %>
 		<li class="item">
 		<%= link_to image_tag(url_for(controller: 'photo', action: 'photo_large', id: img.id)), controller: "present", action: "show", id: img.id %><br />
-			<!--<div class="caption"> -->
-				<div class="change">
-					<span><%= link_to "hahaha" %></span>
-					<span><%= link_to "Delete", controller: "present", action: "destroy", method: "delete", id: img.id %></span>
-				</div>
-				<!--</div> -->
+			<div class="caption"> 
+				<ul class="details">
+					<li><%= link_to "hahaha" %></li>
+					<li><%= link_to "Delete", controller: "present", action: "destroy", method: "delete", id: img.id %></li>
+				</ul>
+			</div> 
 		</li>
 		<% end %>
 	</ul>

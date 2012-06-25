@@ -50,22 +50,6 @@ ActiveRecord::Schema.define(:version => 20120621183240) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "pros", :force => true do |t|
-    t.string   "name",           :null => false
-    t.string   "addr_zone",      :null => false
-    t.string   "address",        :null => false
-    t.integer  "phone",          :null => false
-    t.string   "arr_name",       :null => false
-    t.string   "arr_addr_zone",  :null => false
-    t.string   "arr_address",    :null => false
-    t.integer  "arr_phone",      :null => false
-    t.text     "request_sender"
-    t.string   "select"
-    t.text     "test"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-  end
-
   create_table "talks", :force => true do |t|
     t.string   "user_name"
     t.string   "talk_content"
