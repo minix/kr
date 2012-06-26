@@ -5,7 +5,7 @@ $(document).ready(function() {
 		$(this).find('div.caption').stop(false,true).fadeIn(300);
 	},
 	function() {
-		$(this).find('div.caption').stop(false,true).fadeOut(400);
+		$(this).find('div.caption').stop(false,true).fadeOut(300);
 	});
 });
 
