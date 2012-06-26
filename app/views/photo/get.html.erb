@@ -1,5 +1,9 @@
 <%= form_for(:photo, url: { action: 'save' }, html: { multipart: true }) do |form| %>
 	comment: 	<%= form.text_field("comment") %><br />
 	Upload: 	<%= form.file_field("uploaded_photo") %><br />
+	comment: 	<%= form.text_field("comment") %><br />
+	Upload: 	<%= form.file_field("uploaded_photo") %><br />
+	comment: 	<%= form.text_field("comment") %><br />
+	Upload: 	<%= form.file_field("uploaded_photo") %><br />
 	<%= submit_tag("Upload") %>
 <% end %>
