@@ -14,18 +14,22 @@ class Photo < ActiveRecord::Base
 		img = MiniMagick::Image.read(photo_field.read) 
 		unless img.nil?
 			img_original = img
+			img_original.strip
+			img_original.quality("75%")
 			self.original = img_original.to_blob
 			img_large = img
 			#img_large_w = (img_large[:width] * 0.5).to_i
 			#img_large_h = (img_large[:height] * 0.5).to_i
 			#img_large.resize("#{img_large_w}x#{img_large_h}")
-			img_large.resize("200x200")
+			img_large.resize("300x200>").strip
+			img_large.quality("75%")
 			self.large = img_large.to_blob
 			img_thumbnail = img
 			#img_thumbnail_w = (img[:width] * 0.2).to_i
 			#img_thumbnail_h = (img[:height] * 0.2).to_i
 			#img_thumbnail.resize("#{img_thumbnail_w}x#{img_thumbnail_h}")
-			img_thumbnail.resize("80x80")
+			img_thumbnail.resize("80x80").strip
+			img_thumbnail.quality("75%")
 			self.thumbnail = img_thumbnail.to_blob
 		end
 	end
