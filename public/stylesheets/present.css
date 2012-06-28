@@ -12,5 +12,7 @@
 .item .caption .details li a { text-decoration:none;color:rgb(0, 174, 241); font-size:12px; letter-spacing:-1px; font-family:Arial, Helvetica, sans-serif; }
 
 
-#persion_pre{ position:relative; margin-top:100px; text-align:center; }
-
+#persion_pre{ position:relative; width:1000px; min-width:1000px; height:100%; background-color:white; margin:0 auto; }
+.comment_content{ margin-left:80px;}
+.comment_content img{ margin-top:20px; }
+.show_comment{ }

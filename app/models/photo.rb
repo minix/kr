@@ -13,6 +13,9 @@ class Photo < ActiveRecord::Base
 		self.content_type			= photo_field.content_type.chomp
 		img = MiniMagick::Image.read(photo_field.read) 
 		unless img.nil?
+			if self.content_type.chomp == 'png' or self.content_type.chomp == 'gif'
+				img.convert("jpg")
+			end
 			img_original = img
 			img_original.strip
 			img_original.quality("75%")
