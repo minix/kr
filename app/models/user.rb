@@ -1,11 +1,13 @@
 class User < ActiveRecord::Base
 		require 'digest/sha1'
 
+		EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+
 		has_many :likes
 		belongs_to :kr
 
 		validates_presence_of :email, :password, :password_confirmation, :salt
-		validates_uniqueness_of :email
+		validates_uniqueness_of :email, :presence => true, :uniqueness => true, :format => EMAIL_REGEX
 		# validates_length_of :within => 3..40
 		validates_length_of :password, :within => 6..40
 
@@ -24,9 +26,13 @@ class User < ActiveRecord::Base
 		end
 
 
-		def self.authenticate(name, password)
-			u = find(:first, conditions: ["name = ?", name])
-			#u = find(:first, :conditions => { :email => "#{email}" })
+		def self.authenticate(name_or_email, password)
+			#u = find(:first, conditions: ["name = ?", name])
+			if EMAIL_REGEX.match(name_or_email)
+				u = User.find_by_email(name_or_email)
+			else
+				u = User.find_by_name(name_or_email)
+			end
 			return nil if u.nil?
 			return u if User.encrypt(password, u.salt) == u.hash_passwd
 			nil

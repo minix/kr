@@ -1,6 +1,8 @@
 class CommentController < ApplicationController
+	respond_to :js, :html
+
 	def index
-		@comments = Comment.all
+		@comment = Comment.all
 		respond_to do |format|
 			format.html # index.html.erb
 			format.rss
@@ -8,12 +10,9 @@ class CommentController < ApplicationController
 	end
 
 	def create
-		@comment = Comment.create!(params[:comment])
+		@comment = Comment.new(params[:comment])
 		flash[:notice] = "Thanks for commenting!"
-		respond_to do |format|
-			format.html { redirect_to comments_path }
-			format.js
-		end
+		respond_with(@comment, :layout => !request.xhr? )
 	end
 
 	def destroy

@@ -5,21 +5,25 @@ class UserController < ApplicationController
 			if @user.save
 				session[:user] = User.authenticate(@user.name, @user.password)
 				flash[:notice] = "Signup success"
+				flash[:color] = "valid"
 				redirect_to controller: "present", action: "index"
 			else
 				flash[:warning] = "Signup Unsuccessful"
+				flash[:color] = "invalid"
 			end
 		end
   end
 
   def login
-		if request.post?
+		if request.post? 
 			if session[:user] = User.authenticate(params[:user][:name], params[:user][:passwd])
 				flash[:notice] = "login successful"
-				#redirect_to_stored
+				flash[:color] = "valid"
 				redirect_to controller: "present", action: "index"
 			else
-				flash[:warning] = "login unsuccessful"
+				flash[:warning] = "Invalid Username or Password"
+				flash[:color] = "invalid"
+				render "login"
 			end
 		end
   end
