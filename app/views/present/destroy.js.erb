@@ -1,0 +1,7 @@
+$(document).ready(function() {
+	  $(".delete_comment").live('ajax:success', function(evt, data, status, xhr){
+	    $(this).closest('div').fadeOut();
+	  });
+});
+
+

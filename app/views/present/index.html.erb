@@ -6,7 +6,7 @@
 			<div class="caption"> 
 				<ul class="details">
 					<li><%= link_to "hahaha" %></li>
-					<li><%= link_to "Delete", controller: "present", action: "destroy", method: "delete", id: img.id %></li>
+					<li><%= link_to "Delete", controller: "present", action: "destroy", remote: true, method: "delete", id: img.id %></li>
 				</ul>
 			</div> 
 		</li>

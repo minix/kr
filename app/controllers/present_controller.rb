@@ -1,4 +1,6 @@
 class PresentController < ApplicationController
+	respond_to :html, :js
+
 	def index
 		#if session[:user]
 		#	@user = User.find_by_id(session[:user])
@@ -27,7 +29,10 @@ class PresentController < ApplicationController
 	def destroy
 		@photo = Photo.find(params[:id])
 		@photo.destroy
-		redirect_to controller: "present", action: "index"
+		respond_to do |format|
+			format.js { render nothing: true }
+		end
+		#redirect_to controller: "present", action: "index"
 	end
 
 protected
