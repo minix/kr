@@ -13,10 +13,19 @@
 			<%= link_to "Login", :controller => :user, :action => "login" %>
 	</fieldset>
 <% end %>
+<<<<<<< HEAD
 <% if @user.errors.any? %>
   <ul class="Signup_Errors">
     <% for message_error in @user.errors.full_messages %>
 	     <li>* <%= message_error %></li>
     <% end %>
+=======
+ 
+<% if @user.errors.any? %>
+	<ul class="Signup_Errors">
+		<% for message_error in @user.errors.full_messages %>
+			<li>* <%= message_error %></li>
+		<% end %>
+>>>>>>> 02171031fb35220581a625c8704992ffa84e2430
 	</ul>
 <% end %>

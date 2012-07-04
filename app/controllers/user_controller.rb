@@ -15,7 +15,7 @@ class UserController < ApplicationController
   end
 
   def login
-		if request.post?
+		if request.post? 
 			if session[:user] = User.authenticate(params[:user][:name], params[:user][:passwd])
 				flash[:notice] = "login successful"
 				flash[:color] = "valid"

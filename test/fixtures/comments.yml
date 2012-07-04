@@ -3,9 +3,9 @@
 one:
   username: MyString
   present_id: 1
-  comment_content: MyString
+  comment_content: MyText
 
 two:
   username: MyString
   present_id: 1
-  comment_content: MyString
+  comment_content: MyText

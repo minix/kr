@@ -26,10 +26,15 @@ class User < ActiveRecord::Base
 		end
 
 
+<<<<<<< HEAD
 #		def self.authenticate(name, password)
 #			u = find(:first, conditions: ["name = ?", name])
 #			#u = find(:first, :conditions => { :email => "#{email}" })
 		def self.authenticate(name_or_email, password)
+=======
+		def self.authenticate(name_or_email, password)
+			#u = find(:first, conditions: ["name = ?", name])
+>>>>>>> 02171031fb35220581a625c8704992ffa84e2430
 			if EMAIL_REGEX.match(name_or_email)
 				u = User.find_by_email(name_or_email)
 			else
