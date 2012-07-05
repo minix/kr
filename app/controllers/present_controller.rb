@@ -36,6 +36,10 @@ class PresentController < ApplicationController
 		#redirect_to controller: "present", action: "index"
 	end
 
+	def search
+
+	end
+
 protected
 
 def find_user(user_id)

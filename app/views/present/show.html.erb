@@ -1,20 +1,19 @@
 <div id="persion_pre">
 	<div class="comment_content">
-		<%= image_tag(url_for(controller: 'photo', action: 'photo', id: @photo.id)) %>
-		<div class="show_comment">
-		<% @all_comment.each do |all_comment| %>
-			<p>
-				<strong><%= all_comment.username %></strong>: <%= all_comment.comment_content %>
-			</p>
-		<% end %>
-	</div>
-	<div id="comment">
-		<% if @user %>
-			<p>You are <%= @username.name %></p>
-			<%= form_for :comment, method: "get", remote: true, "data-type" => :json do |comment| %>
-				<%= comment.text_area :comment_content %><br />
-				<%= comment.submit "Comment" %>
+		<%= image_tag(url_for(controller: 'photo', action: 'photo', id: @photo.id), :class => "commented_photo") %>
+		<p class="show_comment">
+			<% @all_comment.each do |all_comment| %>
+				<strong><%= all_comment.username %></strong>: <%= all_comment.comment_content %><br />
 			<% end %>
-		<% end %>
+		</p>
 	</div>
+	<div class="comment">
+			<% if @user %>
+				<p>You are <%= @username.name %></p>
+				<%= form_for :comment, method: "get", remote: true, "data-type" => :json do |comment| %>
+					<%= comment.text_area :comment_content %><br />
+					<%= comment.submit "Comment" %>
+				<% end %>
+			<% end %>
+		</div>
 </div>
