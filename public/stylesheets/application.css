@@ -63,17 +63,20 @@ table {
 } */
 html{ background:url("public/images/bg.jpg") repeat scroll 0% 0% rgb(247, 245, 245); }
 body{ min-width:1000px; height:100%; }
-#header{ width:100%; background-color:rgb(250, 247, 247); position:absolute; top:0; height:36px; bottom:45px; border-bottom:1px solid #CFCACA; box-shadow:inset 0 1px white, 0 1px 3px rgba(34, 25, 25, 0.4);}
+#header{ width:100%; background-color:rgb(250, 247, 247); position:absolute; top:0; height:34px; bottom:45px; border-bottom:1px solid #CFCACA; box-shadow:inset 0 1px white, 0 1px 3px rgba(34, 25, 25, 0.4);}
 #logo{ position:absolute; height:30px; left:350px; margin-top:9px; font-size:13px; }
 .nav{ position:relative; margin-left:85%; margin-top:7px; }
 .nav li{ display:inline-block; float:left; }
 .nav li a{ text-decoration:none; padding:13px 12px; font-size:.8em; color:#333;  }
 .nav li a:hover{ text-decoration:underline; background-color:#EBEBEB; }
 
-#search_input { float:left; width:270px; height:36px;}
-#search_input .sea{ width:180px; height:22px; margin-left:30px; margin-top:5px; font-size:1em; border:1px solid; border-color:#C2C0C0 #CCCACA #D1CFCF; box-shadow:0 1px white, inset 0 1px rgba(34, 25, 25, 0.05); -moz-box-shadow: 0 1px #fff, inset 0 1px rgba(34,25,25,0.05); -webkit-box-shadow:0 1px white, inset 0 1px rgba(34, 25, 25, 0.05);}
-.searchbox_submit{ border:1px solid #C2C0C0; background-color:transparent; position:absolute; top:5px; left:211px; width:24px; height:26px; }
-.searchbox_submit img{ position:absolute; left:14px; top:10px; }
+#search_input { float:left; width:270px; height:36px; padding-right:10px;}
+#search_input input[type="text"]{ padding-right:18px; }
+#search_input input.sea{ width:160px; height:20px; margin-left:30px; margin-top:5px; font-size:1em; border:1px solid; border-color:#C2C0C0 #CCCACA #D1CFCF; box-shadow:0 1px white, inset 0 1px rgba(34, 25, 25, 0.05); -moz-box-shadow: 0 1px #fff, inset 0 1px rgba(34,25,25,0.05); -webkit-box-shadow:0 1px white, inset 0 1px rgba(34, 25, 25, 0.05);}
+
+#search_input .search_button{ position:absolute; left:193px; top:10px; word-wrap:break-word; overflow:hidden; }
+/*.searchbox_submit{ border:1px solid #C2C0C0; background-color:transparent; position:absolute; top:5px; left:211px; width:24px; height:26px; }
+.searchbox_submit img{ position:absolute; left:14px; top:10px; } */
 #search_present{ position:absolute; margin-left:40%; width:500px; height:36px; top:-4px; }
 .search_content{ }
 .search_content li{ float:left; display:block; }
