@@ -12,6 +12,7 @@ class PresentController < ApplicationController
 	def show
 		@user = session[:user]
 		@photo = Photo.find(params[:id])
+		#@photo = Photo.first
 		if current_user
 			@username = current_user
 			@comment = Comment.new(params[:comment])

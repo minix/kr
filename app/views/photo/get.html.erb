@@ -1,13 +1,13 @@
 <%= form_for(:photo, url: { action: 'save' }, html: { multipart: true }) do |form| %>
-	<%= form.fields_for("uploaded_photo") do |uploaded_photo| %>
-		comment: <%= uploaded_photo.text_field :comment %>
-		Upload: 	<%= uploaded_photo.file_field :uploaded_photo %><br />
-	<% end %>
-	comment: 	<%#= form.text_field("comment") %><br />
-	Upload: 	<%#= form.file_field("uploaded_photo") %><br />
-	comment: 	<%#= form.text_field("comment") %><br />
-	Upload: 	<%#= form.file_field("uploaded_photo") %><br />
-	comment: 	<%#= form.text_field("comment") %><br />
-	Upload: 	<%#= form.file_field("uploaded_photo") %><br />
+	<%#= form.fields_for("uploaded_photo") do |uploaded_photo| %>
+		comment: <%#= uploaded_photo.text_field :comment %>
+		Upload: 	<%#= uploaded_photo.file_field :uploaded_photo %><br />
+	<%# end %>
+	comment: 	<%= form.text_field("comment") %><br />
+	Upload: 	<%= form.file_field("uploaded_photo") %><br />
+	comment: 	<%= form.text_field("comment") %><br />
+	Upload: 	<%= form.file_field("uploaded_photo") %><br />
+	comment: 	<%= form.text_field("comment") %><br />
+	Upload: 	<%= form.file_field("uploaded_photo") %><br />
 	<%= submit_tag("Upload") %>
 <% end %>

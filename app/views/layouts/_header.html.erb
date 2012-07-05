@@ -1,7 +1,7 @@
 <div id="header">
 	<form id="search_input">
 			<input type="text" name="search" class="sea" /> 
-			<input type="image" src="project/public/images/s.gif" class="search_button" />
+			<input type="image" src="<%= image_path("s.gif"); %>" class="search_button" />
 	</form>
 	<div id="logo">
 		<%= link_to "Home", controller: "present", action: "index" %>
@@ -18,7 +18,6 @@
 		<% if @user == nil %>
 			<li><%= link_to "创建新用户", controller: "user", action: "signup", class: "signup" %></li>
 			<li><%= link_to "登录", controller: "user", action: "login" %></li>
-			<li><%= link_to "上传", controller: "photo", action: "get" %></li>
 		<% else %>	
 			<li><%= link_to @user.name, controller: "profile", action: "index" %></li>
 			<li><%= link_to '注销', controller: "user", action: "logout" %></li>
