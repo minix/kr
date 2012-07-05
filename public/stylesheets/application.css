@@ -67,7 +67,7 @@ body{ min-width:1000px; height:100%; }
 #logo{ position:absolute; height:30px; left:350px; margin-top:9px; font-size:13px; }
 .nav{ position:relative; margin-left:85%; margin-top:7px; }
 .nav li{ display:inline-block; float:left; }
-.nav li a{ text-decoration:none; padding:13px 12px; font-size:.8em; color:#333;  }
+.nav li a{ text-decoration:none; padding:11px 12px; font-size:.8em; color:#333;  }
 .nav li a:hover{ text-decoration:underline; background-color:#EBEBEB; }
 
 #search_input { float:left; width:270px; height:36px; padding-right:10px;}
