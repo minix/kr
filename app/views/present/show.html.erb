@@ -8,12 +8,12 @@
 		</p>
 	</div>
 	<div class="comment">
-			<% if @user %>
-				<p>You are <%= @username.name %></p>
-				<%= form_for :comment, method: "get", remote: true, "data-type" => :json do |comment| %>
-					<%= comment.text_area :comment_content %><br />
-					<%= comment.submit "Comment" %>
-				<% end %>
+		<% if @user %>
+			<p>You are <%= @username.name %></p>
+			<%= form_for :comment, method: "get", remote: true, "data-type" => :json do |comment| %>
+				<%= comment.text_area :comment_content, :size => "40x6" %><br />
+				<%= comment.submit "Comment" %>
 			<% end %>
-		</div>
+		<% end %>
+	</div>
 </div>

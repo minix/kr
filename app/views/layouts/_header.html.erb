@@ -1,7 +1,7 @@
 <div id="header">
-	<form id="search_input">
+	<form class="search_input">
 			<input type="text" name="search" class="sea" /> 
-			<input type="image" src="<%= image_path("s.gif"); %>" class="search_button" />
+			<%= image_submit_tag("s.gif", :class => 'search_button') %>
 	</form>
 	<div id="logo">
 		<%= link_to "Home", controller: "present", action: "index" %>

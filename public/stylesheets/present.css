@@ -11,11 +11,11 @@
 .item .caption .details li{ display:inline; }
 .item .caption .details li a { text-decoration:none;color:rgb(0, 174, 241); font-size:12px; letter-spacing:-1px; font-family:Arial, Helvetica, sans-serif; }
 
-
 #persion_pre{ position:relative; width:1000px; min-width:1000px; height:100%; background-color:white; margin:0 auto; top:60px; }
-.comment_content{ left:80px; }
+.comment_content{ position:relative; margin:0 auto; }
 .comment_content img{ margin-top:20px; }
-.commented_photo, .show_comment{ float:left; }
-.commented_photo{ }
-.show_comment{  }
-#comment{ float:clear; }
+.commented_photo, .show_comment{ float:left; margin-left:50px; }
+.commented_photo{  }
+.show_comment{ }
+.comment{ clear:both; }
+
