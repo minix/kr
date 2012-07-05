@@ -1,11 +1,11 @@
 <div id="persion_pre">
 	<div class="comment_content">
 		<%= image_tag(url_for(controller: 'photo', action: 'photo', id: @photo.id), :class => "commented_photo") %>
-		<p class="show_comment">
+		<ul class="show_comment" style="height:300px;" >
 			<% @all_comment.each do |all_comment| %>
-				<strong><%= all_comment.username %></strong>: <%= all_comment.comment_content %><br />
+				<li><strong><%= all_comment.username %></strong>: <%= all_comment.comment_content %></li>
 			<% end %>
-		</p>
+		</ul>
 	</div>
 	<div class="comment">
 		<% if @user %>

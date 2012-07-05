@@ -3,6 +3,7 @@
   They will automatically be included in application.css.
 */
 #all_content{ position:relative; top:60px; }
+
 .item {position:relative; float:left; display:inline-block; }
 .item a{line-height:100%; font-size:0; float:left; }
 .item img { }
@@ -12,10 +13,11 @@
 .item .caption .details li a { text-decoration:none;color:rgb(0, 174, 241); font-size:12px; letter-spacing:-1px; font-family:Arial, Helvetica, sans-serif; }
 
 #persion_pre{ position:relative; width:1000px; min-width:1000px; height:100%; background-color:white; margin:0 auto; top:60px; }
-.comment_content{ position:relative; margin:0 auto; }
+
+.comment_content{ position:relative; margin:0 auto; width:1000px; display:block; }
 .comment_content img{ margin-top:20px; }
 .commented_photo, .show_comment{ float:left; margin-left:50px; }
 .commented_photo{  }
-.show_comment{ }
+.show_comment{ overflow:scroll; width:500px; }
 .comment{ clear:both; }
 
