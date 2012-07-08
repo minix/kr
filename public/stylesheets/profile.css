@@ -1,4 +1,4 @@
-.feature { position:relative; width:1400px; top:20px; height:676px; background-color:#fff; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .15); -moz-box-shadow: 	0 0 4px rgba(0, 0, 0, .15); box-shadow: 		0 0 4px rgba(0, 0, 0, .15); margin-left:20px;}
+.feature { position:absolute; width:1400px; top:50px; height:676px; background-color:#fff; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .15); -moz-box-shadow: 	0 0 4px rgba(0, 0, 0, .15); box-shadow: 		0 0 4px rgba(0, 0, 0, .15); margin-left:20px;}
 .featureWrapper { position:relative; top:-50px; left:151px; margin-left:25px; width:100%; z-index:1; margin-top:5px; }
 .feature ul { position:absolute; top:0px; left:0px; margin:0; padding:0; width:84px; z-index:2; list-style:none; }
 .feature li a { display:block; width:150px; height:22px; padding:11px; color:#CCC; font-size:1em; }

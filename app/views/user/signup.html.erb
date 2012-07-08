@@ -1,31 +1,22 @@
 <%= link_to "Logo", controller: "present", action: "index" %>
 <%= form_for :user, url: { controller: "user", action: "signup" } do |f| %>
 	<fieldset>
-			<label for="user mail">Email</label>
+		<label for="user mail">Email</label><br />
 			<%= f.text_field :email, :size => 20 %><br />
-			<label for="user_login">Username</label>
-			<%= f.text_field :name, :size => 20 %>
+			<label for="user_login">Username</label><br />
+			<%= f.text_field :name, :size => 20 %><br />
 			<label for="user_password">Password</label><br />
 			<%= f.password_field :password, :size => 20 %>
-			<label for="user_password_confirmation">Confirmation</label><br />
-			<%= f.password_field :password_confirmation, :size => 20 %><br />
+			<label for="user_password_confirmation">Confirmation</label>
+			<%= f.password_field :password_confirmation, :size => 20 %>
 			<%= submit_tag "signup"%>
 			<%= link_to "Login", :controller => :user, :action => "login" %>
 	</fieldset>
 <% end %>
-<<<<<<< HEAD
-<% if @user.errors.any? %>
-  <ul class="Signup_Errors">
-    <% for message_error in @user.errors.full_messages %>
-	     <li>* <%= message_error %></li>
-    <% end %>
-=======
- 
 <% if @user.errors.any? %>
 	<ul class="Signup_Errors">
 		<% for message_error in @user.errors.full_messages %>
 			<li>* <%= message_error %></li>
 		<% end %>
->>>>>>> 02171031fb35220581a625c8704992ffa84e2430
 	</ul>
 <% end %>
