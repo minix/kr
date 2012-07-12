@@ -2,3 +2,8 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+#glob_login { position:relative; margin:0 auto; width:800px; height:550px; background-color:#FFF; }
+.login_form {background:-moz-linear-gradient(center top , #FFFFFF 0px, #DDDDDD 100%) repeat scroll 0 0 transparent; border-bottom: 1px solid #CCC; border-left:1px solid #EEE; border-right:1px solid #EEE; box-shadow:0 1px 0 rgba(0, 0, 0, 0.1); } 
+.name_form, .password_form{ width:300px; height:30px; font-size:16px; }
+.password_form{ margin-top:20px; }
+.login_form .placeholder{ -moz-transition:opacity 0.1s ease 0s, font-size 0.1s ease 0s; -moz-user-select: none; bottom:1px; color:#999; cursor:text; font-size:14px; height:20px; left:-310px; line-height:20px; padding:4px; position:relative; right:1px; text-shadow:0 1px 0 rgba(255, 255, 255, 0.5); top:1px; white-space:nowrap; z-index:1; }

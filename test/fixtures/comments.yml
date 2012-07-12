@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  username: MyString
   present_id: 1
   comment_content: MyText
+  username: MyString
 
 two:
-  username: MyString
   present_id: 1
   comment_content: MyText
+  username: MyString

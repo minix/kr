@@ -1,0 +1,6 @@
+<%= semantic_for_for [@present, Comment.new] do |f| %>
+  <%= f.inputs :comment_content, label: flase %>
+  <%= f.buttons do %>
+    <%= f.comment_buttom "Add Comment" %>
+  <% end %>
+<% end %>

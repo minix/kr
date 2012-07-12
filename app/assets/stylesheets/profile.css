@@ -1,0 +1,9 @@
+.feature { position:absolute; width:1400px; top:50px; height:676px; background-color:#fff; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .15); -moz-box-shadow: 	0 0 4px rgba(0, 0, 0, .15); box-shadow: 		0 0 4px rgba(0, 0, 0, .15); margin-left:20px;}
+.featureWrapper { position:relative; top:-50px; left:151px; margin-left:25px; width:100%; z-index:1; margin-top:5px; }
+.feature ul { position:absolute; top:0px; left:0px; margin:0; padding:0; width:84px; z-index:2; list-style:none; }
+.feature li a { display:block; width:150px; height:22px; padding:11px; color:#CCC; font-size:1em; }
+.feature li a:hover { color:#fff; background-color:rgb(46, 53, 56); }
+.feature li a.selected { position:relative; color:#FFF;  width:150px; height:22px; border:0; background:-moz-linear-gradient(center top , rgb(27, 144, 228) 1%, rgb(10, 124, 200) 100%) repeat scroll 0% 0% transparent; line-height:22px;  }
+.feature li a strong { line-height:10px; }
+.feature ul li{ width:172px; background-color:rgb(51, 57, 61); }
+.feature ul .end{ height:325px; width:172px; background-color:rgb(51, 57, 61); }
