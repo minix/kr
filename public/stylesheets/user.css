@@ -2,19 +2,12 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-#glob_login { position:relative; margin:0 auto; top:200px; width:450px; height:144px; background-color:#FFF; border:1px solid #E7E7E7; border-radius:5px 5px 0 0;; -webkit-border-radius:5px 5px 0 0;; -moz-border-radius:5px 5px 0 0; border-bottom:0;  }
-#glob_login .signup_header{ height:40px; border-radius:5px 5px 0 0; -webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0; }
-#glob_login .signup_header h1{ padding:0; font-size:2em; }
-.login_form { } 
-.name_form, .password_form{ width:100%; height:40px; font-size:16px; border-top:1px solid #E7E7E7; border-bottom:1px solid #E7E7E7; border-left:0; border-right:0; font-size:2em; }
-.name_form{ }
-.password_form{ border-top:0; }
+#glob_login {background:#8F0D00; position:relative; height:60px; margin:0 auto; top:150px; width:890px; padding:18px 0; border-radius:4px; -moz-border-radius:4px; -khtml-border-radius:4px; -webkit-border-radius:4px; }
+.signup_nav{ margin:0; display:block; margin-left:-40px; }
+.signup_nav li{ float:left; margin-left:18px; display:inline-block; }
+.signup_nav input.name_form, .signup_nav input.password_form { margin:0; width:278px; padding:12px 14px; height:50px; outline: none; border: none; box-sizing: border-box; -moz-box-sizing: border-box; background-color: #ECE9DE; color: #907F68; font-family: Myriad Pro, Arial, sans-serif; font-size:18px; font-weight:bold; line-height: 1; border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius:4px; }
+.signup_button{ color:white; background: red; border: none; outline: none; display: block; width: 264px; font-family: Myriad Pro, Arial, sans-serif; font-size: 18px; font-weight: bold; padding: 12px 14px; height: 50px; text-shadow: 0px 1px 0px black; -moz-box-shadow: 0px 0px 25px #400303; -webkit-box-shadow: 0px 0px 25px #400303; box-shadow: 0px 0px 25px #400303; border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; background: #A2CB15; background: -moz-linear-gradient(top, #A2CB15 0%, #72970C 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A2CB15), color-stop(100%,#72970C)); background: -webkit-linear-gradient(top, #A2CB15 0%,#72970C 100%); background: -o-linear-gradient(top, #A2CB15 0%,#72970C 100%); background: -ms-linear-gradient(top, #A2CB15 0%,#72970C 100%); background: linear-gradient(top, #A2CB15 0%,#72970C 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A2CB15', endColorstr='#72970C',GradientType=0 ); -webkit-border-radius:4px; }
 
-.login_form .placeholder{ -moz-transition:opacity 0.1s ease 0s, font-size 0.1s ease 0s; -moz-user-select: none; bottom:1px; color:#999; cursor:text; font-size:14px; height:20px; left:-310px; line-height:20px; padding:4px; position:relative; right:1px; text-shadow:0 1px 0 rgba(255, 255, 255, 0.5); top:1px; white-space:nowrap; z-index:1; }
-
-.signup_button{ font-weight:bold; position:relative; top:10px; border:0; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; float:right; width:90px; height:35px; background-image:-moz-linear-gradient(top, #FFB94B, #FDDB6F); background-image:-webkit-linear-gradient(top, #FFB94B, #FDDB6F 100%); background-image:-ms-linear-gradient(top, #FFB94B, #FDDB6F 100%); background-image:-o-linear-gradient(top, #FFB94B, #FDDB6F 100%); background-image:linear-gradient(top, #FFB94B, #FDDB6F 100%); background-color: #FFB94B; }
-.signup_button:hover, .signup_button:focus {background-color: #FDDB6F; background-image: -webkit-gradient(linear, left top, left bottom, from(#FFB94B), to(#FDDB6F)); background-image: -webkit-linear-gradient(top, #FFB94B, #FDDB6F); background-image: -moz-linear-gradient(top, #FFB94B, #FDDB6F); background-image: -ms-linear-gradient(top, #FFB94B, #FDDB6F); background-image: -o-linear-gradient(top, #FFB94B, #FDDB6F); background-image: linear-gradient(top, #FFB94B, #FDDB6F); }
-
-.forgot_password{ position:relative; top:20px; float:right; margin-right:10px; font-size:12px; }
-.forgot_password a{ color:#000; }
-.forget_password a:hover{ text-decoration:under_line; }
+.forgot_password{ position:relative; top:10px; float:left; margin-left:780px; font-size:12px; font-family: Myriad Pro, Arial, sans-serif; }
+.forgot_password a{ color:#FFF; }
+.forget_password a:hover{ text-decoration:underline; }
