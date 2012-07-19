@@ -1,13 +1,16 @@
 <div id="glob_login">
 	<!--<div class="signup_header"><h1>Signup</h1></div> -->
-  <%= flash[:notice] %>
     <%= form_for :user, url: { controller: "user", action: "login"} do |f| %>
-			<ul class="signup_nav">
+			<ul class="login_nav">
 				<li><%= f.text_field :name, class: "name_form", autocomplete: "on", placeholder: "Enter Your Email Address"%></li>
 				<li><%= f.password_field :passwd, class: "password_form", placeholder: "Enter Your Password" %></li>
-				<li><%= submit_tag "Signup", class: "signup_button" %></li>
+				<li><%= submit_tag "Login", class: "login_button" %></li>
 			</ul>
-        <%#= link_to 'Register', :action => 'signup' %>
-        <span class="forgot_password"><%= link_to 'Forgot password', action: "forgot_password" %> </span>
+        <div class="other_part">
+          <ul>
+            <li class="signup_button"><%= link_to 'Signup', :controller => "user", :action => "signup" %></li> 
+            <li class="lost_password"><%= link_to 'Lost password', action: "forgot_password" %> </li>
+          </ul>
+        </div>
     <% end %>
 </div>
